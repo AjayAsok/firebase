@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Faker/3.1.0/faker.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.16.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.16.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.16.1/firebase-firestore.js"></script>
+    <script>
+      // Import the functions you need from the SDKs you need
+      // import initializeApp  from "firebase-app";
+      // import { getAnalytics } from "firebase/analytics";
+      // TODO: Add SDKs for Firebase products that you want to use
+      // https://firebase.google.com/docs/web/setup#available-libraries
+
+      // Your web app's Firebase configuration
+      // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+      const firebaseConfig = {
+        apiKey: "AIzaSyApDrcKUcsmcjZu6niyW2RypuQR7A1jVC0",
+        authDomain: "trial-app-987.firebaseapp.com",
+        projectId: "trial-app-987",
+        storageBucket: "trial-app-987.appspot.com",
+        messagingSenderId: "385625227470",
+        appId: "1:385625227470:web:c7bfe93713e1e120abd09f",
+        measurementId: "G-39395RVPHT",
+      };
+
+      // Initialize Firebase
+      //const app =
+      firebase.initializeApp(firebaseConfig);
+      //const analytics = getAnalytics(app);
+    </script>
+    <script type="module" src="index.js" defer></script>
+  </head>
+  <body>
+    <section id="whenSignedOut">
+      <button class="button bouncy" id="signInBtn">SignIn with Google</button>
+    </section>
+    <section id="whenSignedIn" hidden="false">
+      <div id="userDetails"></div>
+      <button class="button bouncy" id="signOutBtn">Sign out</button>
+      <ul id="itemList"></ul>
+      <button class="button bouncy" id="addItem">Add</button>
+    </section>
+  </body>
+</html>
